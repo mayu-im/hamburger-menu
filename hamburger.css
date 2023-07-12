@@ -1,0 +1,42 @@
+header {
+  position: relative;
+}
+input {
+  display: none;
+}
+label {
+  position: absolute;
+  right: 0;
+}
+span,
+span::before,
+span::after {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background-color: #777;
+  content: "";
+  position: absolute;
+}
+span::before {
+  top: 8px;
+}
+span::after {
+  top: 16px;
+}
+ul {
+  list-style: none;
+}
+nav {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  z-index: 99;
+  width: 90%;
+  height: 100%;
+  background-color: #f2f1f1;
+  transform: translateX(-110%);
+}
+#check:checked ~ nav {
+  transform: translateX(0%);
+}
